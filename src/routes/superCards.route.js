@@ -1,10 +1,10 @@
 const router = require("express").Router()
-const superCardsCtrls = require('../controllers/superCards.controller')
+import { getSuperCards, createSuperCards, updateSuperCards, deleteSuperCards } from '../controllers/superCards.controller'
 
-router.get('/', superCardsCtrls.getSuperCards)
-router.post('/', superCardsCtrls.createSuperCards)
-router.put('/:cardId', superCardsCtrls.updateSuperCards)
-router.delete('/:cardId', superCardsCtrls.deleteSuperCards)
+router.get('/', getSuperCards)
+router.post('/', createSuperCards)
+router.put('/:cardId', updateSuperCards)
+router.delete('/:cardId', deleteSuperCards)
 
 
-module.exports = router
+export default router

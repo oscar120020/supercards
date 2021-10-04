@@ -1,4 +1,4 @@
-const SuperCard = require('../models/superCard')
+import SuperCard from '../models/superCard'
 
 
 const getSuperCards = async (req, res) => {
@@ -31,7 +31,7 @@ const deleteSuperCards = async (req, res) => {
     res.status(200).json({message: `Card with id ${id} has been deleted`})
 }
 
-module.exports = {
+export default {
     getSuperCards,
     createSuperCards,
     updateSuperCards,

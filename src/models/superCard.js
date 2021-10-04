@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose')
+import { Schema, model } from 'mongoose'
 
 const superSchema = new Schema(
     {
@@ -14,4 +14,4 @@ const superSchema = new Schema(
 
 const SuperCard = model('superCard', superSchema)
 
-module.exports = SuperCard
+export default SuperCard
