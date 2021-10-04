@@ -1,10 +1,12 @@
-const router = require("express").Router()
-import { getSuperCards, createSuperCards, updateSuperCards, deleteSuperCards } from '../controllers/superCards.controller'
+import { Router } from 'express'
+import superCardsController from '../controllers/superCards.controller'
 
-router.get('/', getSuperCards)
-router.post('/', createSuperCards)
-router.put('/:cardId', updateSuperCards)
-router.delete('/:cardId', deleteSuperCards)
+const router = Router()
+
+router.get('/', superCardsController.getSuperCards)
+router.post('/', superCardsController.createSuperCards)
+router.put('/:cardId', superCardsController.updateSuperCards)
+router.delete('/:cardId', superCardsController.deleteSuperCards)
 
 
 export default router

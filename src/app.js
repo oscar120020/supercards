@@ -1,17 +1,18 @@
 import express, { json, urlencoded } from 'express'
 import morgan from 'morgan'
 import './database'
+
+import cardsRouter from './routes/superCards.route'
+
 const app = express()
 
 // Middelweres
+app.use(morgan('dev'))
 app.use(json())
 app.use(urlencoded({extended: false}))
-app.use(morgan('dev'))
 
 // Routes
-app.get("/", (req, res) => {
-    res.json({mss: "llllllll"})
-})
-app.use('/api/supercards', require('./routes/superCards.route').default)
+
+app.use('/api/supercards', cardsRouter)
 
 export default app
