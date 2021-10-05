@@ -27,5 +27,8 @@
   },
   "engines": {
     "node": "14.x"
-  }
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
 }
