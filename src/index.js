@@ -1,4 +1,5 @@
 import app from './app';
+import "regenerator-runtime/runtime.js";
 
 const PORT = process.env.PORT ||  3000
 
