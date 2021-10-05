@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+dotenv.config(__dirname, '.env')
 
-mongoose.connect("mongodb+srv://oscar12002:oscar12002@cluster0.qtit0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongoose.connect(process.env.DB_URI)
     .then(db => console.log("DB is connected"))
     .catch(err => console.log(err))
